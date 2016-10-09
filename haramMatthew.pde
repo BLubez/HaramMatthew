@@ -49,7 +49,7 @@ void draw() {
   storm.update();
   
   
-  if (f != null && dist(f.x,f.y, storm.x, storm.y) < 63) {
+  if (f != null && dist(f.x,f.y, storm.x, storm.y) < 100) {
 
     f = null;
     if (!(storm.speed <= 1))
@@ -67,7 +67,7 @@ void draw() {
     score += 5;
   }
 
-  if (b != null && dist(b.x,b.y, storm.x, storm.y) < 63) {
+  if (b != null && dist(b.x,b.y, storm.x, storm.y) < 100) {
     b = null;
     storm.speed++;
   }
@@ -78,7 +78,7 @@ void draw() {
   }
   
 
-  if (dist(saviour.x,saviour.y, storm.x, storm.y) < 63) {
+  if (dist(saviour.x,saviour.y, storm.x, storm.y) < 100) {
     state = 1;
     RIPHarambe.play();
   }
@@ -201,7 +201,7 @@ class HurricaneMatthew {
   float targetY;
 
   public HurricaneMatthew () {
-    size = 125;
+    size = 200;
     x = 500;
     y = 500;
     speed = 1;
